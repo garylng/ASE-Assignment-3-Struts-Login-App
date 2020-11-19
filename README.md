@@ -1,27 +1,11 @@
-# struts-login-app
+## Prerequisites: Ensure that MySQL (https://dev.mysql.com/doc/refman/8.0/en/installing.html) and Maven (https://maven.apache.org/download.cgi) are installed.
 
-## Cloning the project
-To clone the project to your local computer, run the following
-```
-git clone https://github.com/Booxworm/struts-login-app
-cd struts-login-app
-```
-
-## Creating MySQL table
-Go to <https://dev.mysql.com/doc/refman/8.0/en/installing.html> to install mySQL on your local computer.
-Ensure that the bin files are added to your environment path.
-
-Once installed, run the following code in a command line, to populate the database.
-```
-mysql -u username -p < create_db.sql
-```
-
-## Running the login server
-Once the database has been created, run the server with
-```
-mvn jetty:run
-```
-It might take a while to install all the dependencies.
-
-Once the server is running, go to <http:localhost:8080/struts-login-app/index>.
-You can try to log in with the available usernames and passwords in the database.
+## Instructions:
+1. Download the project file.
+2. Create the database by running the following command in Command Prompt: mysql -u <enter your MySQL username> -p < create_db.sql.
+3. You will then be prompted to enter your MySQL password.
+4. After successfully logging in, start the server by running the following command: mvn jetty:run.
+5. Once all the dependencies are installed, and the server has started successfully, access the web application using http:localhost:8080/struts-login-app/index.
+6. Login using the accounts populated in the create_db.sql file. Here are some accounts:
+Username: admin; Password: admin
+Username: user1; Password: pass1
